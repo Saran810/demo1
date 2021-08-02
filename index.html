@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIBRARIES</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    
+<!------------------------------------CSS PART----------------------------------------------------->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: #b9345a;
+      box-sizing: border-box;
+      font-family: "urw-din", sans-serif;
+    }
+
+    body {
+      background-color: #292929;
+    }
+
+    nav {
+      background-color: #222221;
+    }
+
+    .nav-link {
+      font-size: 1.2rem;
+    }
+    .nav-item{
+      list-style: none;
+      margin-left: 0px;
+    }
+
+    header {
+      color: white;
+      padding-left: 20px;
+      line-height: 60px;
+      margin-top: 18px;
+      font-size: 55px;
+    }
+
+    .author {
+      font-size: 15px;
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 18px;
+      padding-left: 20px;
+    }
+
+    .minSpecifications {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .minSpecifications p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    td {
+      vertical-align: top;
+      /* color: #989898; */
+      color: rgb(190 190 194);
+      padding: 2px;
+      font-size: 13pt;
+
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 2px 0px;
+    }
+
+    #firstData {
+      font-weight: 500;
+      font-size: 13pt;
+      font-family: sofia-pro, sans-serif;
+      color: white;
+      width: 140px;
+    }
+
+    p {
+
+      text-align: justify;
+      /* color: #989898; */
+      color: rgb(190 190 194);
+      font-size: 17px;
+      letter-spacing: .015rem;
+      line-height: 1.5;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .p-6 {
+      padding: 1rem;
+      padding-bottom: 0px;
+      padding-top: 13px;
+    }
+
+    .mb-2 {
+      margin-bottom: .2rem !important;
+    }
+
+    section p {
+      text-align: initial;
+    }
+
+    .heading {
+      color: white;
+      font-weight: 500;
+      font-size: 13pt;
+    }
+
+    span {
+
+       color: #989898; 
+      color: rgb(190 190 194);
+      font-weight: normal;
+      font-size: 13pt;
+
+    }
+
+    .contact {
+     
+      margin-top: 20px;
+      padding-bottom: 20px;
+      font-size: 13pt;
+      font-weight: 700;
+      padding-left: 20px;
+      padding-top: 10px;
+      color: white;
+      background-color: #222221;
+      border-top: 1px solid #dedede;
+
+    }
+    .socialMedia {
+      display: flex;
+      flex-wrap: wrap;
+      font-weight: normal;
+      font-size: 11pt;
+      color: white;
+    }
+
+    .socialMedia a {
+      width: 249px;
+      font-weight: 500;
+    }
+
+    fieldset {
+      border-width: 2px;
+      border-style: double;
+      border-color: rgb(55, 65, 81);
+      border-radius: .5rem;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 20px;
+      margin-top: 0px;
+    }
+
+    legend {
+      font-size: 1.3em;
+      font-weight: 500;
+      float: none;
+      width: auto;
+      color: #26a5ff;
+      margin-bottom: 0px;
+
+    }
+
+    h2 {
+      font-size: 22pt;
+      font-weight: 500;
+      margin-bottom: .5rem;
+      padding-bottom: .7rem;
+      color: #b9345a;
+
+    }
+
+    h3 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      color: white;
+      margin-bottom: 5px;
+
+    }
+
+    h1 {
+      padding: 4px;
+      margin-bottom: 3px;
+      font-size: 1.8em;
+      color: silver;
+      background-color: rgb(29, 30, 31);
+      font-weight: 500;
+    }
+
+
+
+    .pad {
+      padding: 1.5rem;
+      padding-bottom: 0px;
+      padding-top: 1rem;
+      width: 50%;
+    }
+
+    .mainBody {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .mainSection {
+      background-color: #131417;
+      width: 65%;
+      margin-right: 25px;
+      margin-left: 30px;
+      margin-top: 30px; 
+      border-radius: 16px;
+    }
+
+    hr {
+      margin: 0px;
+    }
+
+    li {
+      list-style: disc;
+      color: white;
+      margin-left: 14px;
+    }
+
+    li p {
+      position: relative;
+      left: -4px;
+    }
+
+    .addSection {
+      width: 35%;
+      margin-top: 30px;
+      margin-right: 13px;
+    }
+
+
+    .adds {
+      margin-bottom: 60px;
+    }
+
+
+    .addHeading {
+      font-size: 16pt;
+      font-weight: 300;
+      letter-spacing: .2rem;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .add {
+      background-color: #131417;
+      height: 100px;
+      margin-top: 25px;
+      display: flex;
+    }
+
+    .add img {
+      margin: 0px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .add span {
+      font-size: 14pt;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    .addText div {
+      color: white;
+      font-size: 14pt;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+
+    .lastAdd {
+      position: sticky;
+      top: 25px;
+    }
+
+
+    @media only screen and (max-width:990px) {
+
+      .mainBody {
+        flex-direction: column;
+      }
+
+      .mainSection {
+        width: auto;
+        margin-right: 30px;
+      }
+
+      .addSection {
+        width: auto;
+      }
+      .adds{
+        margin-bottom: 20px;
+      }
+      .addText div{
+        margin-top: 10px;
+      }
+    }
+
+    @media only screen and (max-width:768px) {
+
+      .pad {
+        width: 100%;
+      }
+
+      .author {
+        font-size: 13px;
+      }
+
+      .mainSection {
+        width: auto;
+        margin: 20px;
+      }
+
+      .addSection {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      .addSection img {
+        margin: auto;
+      }
+
+      .add img {
+        margin: 0px;
+      }
+      .lastAdd{
+        margin-bottom: 0px;
+      }
+
+      header {
+        font-size: 48px;
+        line-height: 45px;
+        margin-top: 18px;
+      }
+
+      .minSpecifications p {
+        font-size: 13pt;
+      }
+
+      p {
+        font-size: 14pt;
+        letter-spacing: .01rem;
+      }
+
+
+    }
+
+    @media only screen and (max-width:577px) {
+      .mainSection {
+        width: auto;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+
+      p {
+        font-size: 13pt;
+      }
+
+      .addSection {
+        margin: 10px;
+      }
+    }
+
+    @media only screen and (max-width:437px) {
+      #firstData {
+        width: 93px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!---------------------------------nav bar------------------------------------------------------------>
+  <nav class=" container-fluid navbar navbar-expand-lg navbar-dark ">
+    <div class="container ">
+      
+      <a style="font-size: 25px;" class="navbar-brand" href="#">TechSnap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-------------------------------------------------LIBRARIES------------------------------------------>
+  <div class="mainBody">
+    <div class="mainSection">
+
+      <header>LIBRARIES</header>
+      <hr style="color: white;">
+      <div class="minSpecifications">
+        <p>"The only thing that you absolutely have to know, is the location of the library."</p>
+        <div style="margin-bottom: 13px;" class="programming">
+<!----------------------------------------------PYTHON------------------------------------------------>
+  <h1>PYTHON LIBRARIES :</h1>
+          <table>
+            <tr><br>
+              <td id="firstData">Tensor Flow</td>
+              <td>:&nbsp</td>
+              <td>TensorFlow is an open-source software library for machine learning across a range of tasks. It's a math library, and also used as a system for building and training neural networks to detect and decipher patterns and correlations, analogous to human learning and reasoning. It is used for both research and production at Google often replacing its closed-source predecessor, DistBelief.TensorFlow provides a Python API as well as Haskell, Java, Go,C++.</td>
+            </tr>
+
+          <tr>
+              <td id="firstData">Scikit-learn</td>
+              <td>:</td>
+              <td>Scikit-learn is the most useful library for machine learning in Python. It provides a selection of efficient tools for machine learning and statistical modeling including classification, clustering, regression and dimensionality reduction via a consistence interface in Python. This library, which is largely written in Python, is built upon NumPy, SciPy and Matplotlib.
+</td>
+            </tr>
+
+            <tr>
+              <td id="firstData">NumPy</td>
+              <td>:</td>
+              <td>NumPy was created in 2005 by Travis Oliphant. It is an open source library and you can use it freely anywhere and anytime. It stands for Numerical Python, is a library consisting of multidimensional array objects and a collection of routines for processing those arrays. Using NumPy, mathematical and logical operations on arrays can be performed.
+</td>
+            </tr>
+
+            <tr>
+              <td id="firstData">Keras</td>
+              <td>:</td>
+              <td> Keras is a basic Python library for deep learning that can run on top of Theano or TensorFlow.
+It was developed to make implementing deep learning models as fast and easy as possible for research and development.
+</td>
+            </tr>
+
+            <tr>
+              <td id="firstData">PyTorch</td>
+              <td>:</td>
+              <td>  PyTorch is a Python machine learning package based on Torch, which is an open-source machine learning package based on the programming language Lua. PyTorch has two main features:
+<br>
+ -->Tensor computation with strong GPU acceleration.<br>
+
+    -->Automatic differentiation for building and training neural networks.</td>
+    </tr>
+            <tr>
+              <td id="firstData">LightGBM</td>
+              <td>:</td>
+              <td>LightGBM(LGBM) is an open-source gradient boosting library that has gained huge popularity among machine learning practitioners. It has also become one of the go-to libraries in Kaggle competitions. It can be used to train models on tabular data with incredible speed and accuracy.
+</td>
+            </tr>
+
+            <tr>
+              <td id="firstData">Eli5</td>
+              <td>:</td>
+              <td> ELI5 is a Python library which allows to visualize and debug various Machine Learning models using unified API. It has built-in support for several ML frameworks and provides a way to explain black-box models.
+</td>
+            </tr>
+
+            <tr>
+              <td id="firstData">SciPy</td>
+              <td>:</td>
+              <td>SciPy is a free and open-source Python library used for scientific computing and technical computing. It is a collection of mathematical algorithms and convenience functions built on the NumPy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+</td>
+            </tr>
+              
+              
+            <tr>
+              <td id="firstData">Theano</td>
+              <td>:</td>
+              <td>
+        Theano is a Python library that lets you define mathematical expressions used in Machine Learning, optimize these expressions and evaluate those very efficiently by using GPUs in critical areas. It can rival typical full C-implementations in most of the cases.
+</td>
+            </tr>
+              
+              
+              
+            <tr>
+              <td id="firstData">Pandas</td>
+              <td>:</td>
+              <td> Pandas is an open source Python package that is most widely used for data science/data analysis and machine learning tasks. It is built on top of another package named Numpy, which provides support for multi-dimensional arrays. As one of the most popular data wrangling packages, Pandas works well with many other data science modules inside the Python ecosystem, and is typically included in every Python distribution.
+   Pandas makes it simple to do many of the time consuming, repetitive tasks associated with working with data, like:<br>
+
+.Data cleansing<br>
+.Data fill<br>
+.Data normalization<br>
+.Merges and joins<br>
+.Data visualization<br>
+.Statistical analysis<br>
+.Data inspection<br>
+.Loading and saving data and many more.
+
+
+</td>
+            </tr>
+              
+              
+          </table>
+        </div>
+        
+<!----------------------------------------R LIBRARIES--------------------------------------------->
+     <br>   <div class="R">
+          <h1>R LIBRARIES : </h1>
+          <table>
+            <tr>
+              <td id="firstData">Shiny:</td>
+              <td>:&nbsp</td>
+              <td>Shiny is an open source R package that provides an refined and powerful web framework for building web applications using R. Shiny helps you turn your analyses into interactive web applications without requiring HTML, CSS, or JavaScript knowledge.</td>
+            </tr>
+            <tr>
+              <td id="firstData">mlr</td>
+              <td>:</td>
+              <td>(Machine Learning in R)<br>
+     Interface to a large number of classification and regression techniques, including machine-readable parameter descriptions. There is also an experimental extension for survival analysis, clustering and general, example-specific cost-sensitive learning.
+</td>
+            </tr>
+            <tr>
+              <td id="firstData">Lubridate</td>
+              <td>:</td>
+              <td> Lubridate is an R package that makes it easier to work with dates and times. Below is a concise tour of some of the things lubridate can do for you. Lubridate was created by Garrett Grolemund and Hadley Wickham, and is now maintained by Vitalie Spinu.</td>
+            </tr>
+            <tr>
+              <td id="firstData">ggplot2</td>
+              <td>:</td>
+              <td> ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.When we do make any changes, they will be generally to add new functions or arguments rather than changing the behaviour of existing functions, and if we do make changes to existing behaviour we will do them for compelling reasons.</td>
+            </tr>
+            <tr>
+              <td id="firstData">Dplyr</td>
+              <td>:</td>
+              <td>  Dplyr is a powerful R-package to transform and summarize tabular data with rows and columns.The package contains a set of functions that perform common data manipulation operations such as filtering for rows, selecting specific columns, re-ordering rows, adding new columns and summarizing data.
+</td>
+            </tr>
+          </table>
+        </div>
+          <br>
+<!---------------------------------------C++ LIBRARIES----------------------------------------------->
+       <br> <div class="C++">
+          <h1>C++ LIBRARIES : </h1>
+          <table>
+            <tr>
+              <td id="firstData"> C++ Two Pieces</td>
+              <td>:&nbsp</td>
+              <td>1) A header file that defines the functionality the library is exposing (offering) to the programs using it.   <br>       2)  Some libraries may be split into multiple files and/or have multiple header files.</td>
+            </tr>
+          </table>
+        </div>          
+        
+<!----------------------------------Swift Programming Language LIBRARIES--------------------------->
+       <br> <div class="SWIFT">
+          <h1>Swift Programming Language LIBRARIES:</h1>
+          <table>
+            <tr>
+              <td id="firstData">Spring</td>
+              <td>:&nbsp</td>
+              <td>  Spring enables Swift programmers to create animations without putting extra time and effort for easy manipulation. The animation library further allows users to create animations in the code. At the same time, the developers also have option to create animations directly by using runtime attributes. </td>
+            </tr>
+              
+              <tr>
+              <td id="firstData">kingfisher:</td>
+              <td>:&nbsp</td>
+              <td>    Spring enables Swift programmers to create animations without putting extra time and effort. The animation library further allows users to create animations in the code. At the same time, the developers also have option to create animations directly in the storyboard by using runtime attributes. 
+ </td>
+            </tr>
+              
+              <tr>
+              <td id="firstData">SnapKit:</td>
+              <td>:&nbsp</td>
+              <td>     While developing iOS apps with Swift, the developers can use SnapKit as an auto layout library. They can further use SnapKit as a DSL to make auto layout easy on iOS. In addition to allowing users to create constraints without writing longer lines of code, SnapKit further helps them to keep the code readable and understandable. Also, its type safe design eliminates chances of common programmer errors.
+ 
+ </td>
+            </tr>
+              
+          </table>
+        </div>          
+          
+<!-------------------------------------------PHP LIBRARIES---------------------------------------->
+         <br> <div class="PHP">
+          <h1>PHP  LIBRARIES : </h1>
+          <table>
+            <tr>
+              <td id="firstData"> PChart</td>
+              <td>:&nbsp</td>
+              <td> PChart is a PHP library that helps generate text data in the form of a visual chart. The data can be displayed in the form of bar charts, pie charts, and other formats. The PHP script generates charts and graphs using SQL queries that help in creating amazing charts and graphs which is quite amazing.</td>
+            </tr>
+               <tr>
+              <td id="firstData">PHP CAPTCHA</td>
+              <td>:&nbsp</td>
+              <td> PHP CAPTCHA is another great PHP library that creates automated audio and visual CAPTCHAs. The CAPTCHAs are completely automated challenges that use the Turing test to differentiate between humans and bots.
+</td>
+            </tr>
+               <tr>
+              <td id="firstData">Dispatch</td>
+              <td>:&nbsp</td>
+              <td>  Dispatch is a simple PHP library that can define URL rules to better organize your site. Using this PHP library allows you to match specific types of HTTP paths and requests, render displays, and much more. Developers can have a powerful and simple setup by combining Dispatch with other PHP libraries.
+</td>
+            </tr>
+              
+              <tr>
+              <td id="firstData">Services_JSON</td>
+              <td>:&nbsp</td>
+              <td>   Services_JSON allows transmission of human readable data. The latest version of the PHP library adds great convenience in transmitting data over the server.
+
+</td>
+            </tr>
+              <tr>
+              <td id="firstData">ImageWorkshop</td>
+              <td>:&nbsp</td>
+              <td>   
+                  ImageWorkshop is a great open source PHP library that gives you control over manipulation of images with layers. Using the PHP library you can crop, resize, add watermarks, make thumbnails, and manipulate the images in many different ways. The PHP library can make it easier to further enhance the images used in the Web site.</td>
+            </tr>
+              
+             <tr>
+              <td id="firstData">Mink</td>
+              <td>:&nbsp</td>
+              <td>   
+                  Mink is another useful PHP library that helps you test proper interaction of Web pages with internet browsers. The library removes API differences between different browsers, thereby giving better testing environment to the developers so that they can use in a effective way.</td>
+            </tr>
+              
+              <tr>
+              <td id="firstData">PHP Thumbnailer</td>
+              <td>:&nbsp</td>
+              <td>   
+                  PHP Thumbnailer is a simple image manipulation PHP library that helps in thumbnail generation. The library does not require installing further external libraries. It gives additional control over thumbnails such as resizing the thumbnail by height, width, percentage, rotating the image, and creating custom crops such as square crops from the center.</td>
+            </tr>
+              
+              
+               <tr>
+              <td id="firstData">Hoa</td>
+              <td>:&nbsp</td>
+              <td>  Hoa is another PHP library,Its a structured, modular, and extensible PHP library that creates a link between research and industrial worlds. The PHP library recommends essential paradigms, mechanisms, and algorithms for ensuring reliability of Web sites.  
+                  </td>
+            </tr>
+               <tr>
+              <td id="firstData">Faker</td>
+              <td>:&nbsp</td>
+              <td>   Faker is a very useful PHP library that can help in creating fake data whenever needed. Using the PHP library, you can perform a variety of tasks such as anonymizing data, bootstrapping database, create XML docs, and perform stress tests.
+  
+                  </td>
+            </tr>
+              
+               <tr>
+              <td id="firstData">Ratchet</td>
+              <td>:&nbsp</td>
+              <td>    Using the Ratchet PHP library Web developers can create real time and bi-directional apps between the clients and servers . The PHP library helps promote and create event driven apps instead of using the traditional HTTP requests.
+
+  
+                  </td>
+            </tr>
+          </table>
+        </div>
+<!-------------------------------------------------------------------------------------------------->
+          <div class="RUBY">
+          <h1>RUBY LIBRARIES: </h1>
+          <table>
+            <tr>
+              <td id="firstData">Byebug</td>
+              <td>:&nbsp</td>
+              <td>  For Ruby,Byebug is a simple to use and feature rich debugger. It uses the TracePoint API for execution control and the Debug Inspector API for call stack navigation.</td>
+            </tr>
+              
+              <tr>
+              <td id="firstData">Bettor_errors</td>
+              <td>:&nbsp</td>
+              <td>  This gem shows errors in the web page or website to help users with information. Better_errors is an advanced gem that replaces the Rail error page. Use this gem as Rack middleware in Rack application. 
+</td>
+            </tr>
+               <tr>
+              <td id="firstData">ElasticSearch:</td>
+              <td>:&nbsp</td>
+              <td>   The elasticsearch library is a wrapper for two separate libraries: elasticsearch-transport , which provides a low-level Ruby client for connecting to an Elasticsearch cluster. elasticsearch-api , which provides a Ruby API for the Elasticsearch RESTful API.
+
+</td>
+            </tr>
+              <tr>
+              <td id="firstData">Carrierwave</td>
+              <td>:&nbsp</td>
+              <td> From Ruby applications,This gem provides a simple and extremely flexible way to upload files. It works well with Rack based web applications, such as Ruby on Rails.
+
+</td>
+            </tr>
+              <tr>
+              <td id="firstData">Minimagick</td>
+              <td>:&nbsp</td>
+              <td>MiniMagick is a gem that can help you to sort. It’s an interface between the ImageMagick program & your Ruby code.It helps you apply all sorts of transformations to your images to customize them to your needs.
+</td>
+            </tr>   
+          </table>
+        </div>          
+        
+<!-------------------------------------C LIBRARIES---------------------------------------------------->
+          <br>
+            <div class="C">
+          <h1>C LIBRARIES: </h1>
+          <table>
+            <tr>
+                <br>
+              <td id="firstData">C</td>
+              <td>:&nbsp</td>
+              <td> A library in C is a collection of header files, exposed for use by other programs.
+<br>
+.stdlib.h, Stops a program abnormally or Calculates the absolute value of an integer argument n (depends on the function).
+.math.h, Calculates the arc cosine of x.<br>
+.time.h, Converts the time that is stored as a structure to a character string.</td>
+            </tr>
+                </table>
+          </div>
+        
+<!------------------------------------------------JAVA----------------------------------------------------->
+
+          <br>
+            <div class="JAVA">
+          <h1>JAVA LIBRARIES: </h1>
+          <table>
+            <tr>
+                <br>
+              <td id="firstData">Google Guava</td>
+              <td>:&nbsp</td>
+              <td> Google Guava is another general-purpose Java library. Initially developed by Google and designed by renowned Software Engineer and Author Joshua Bloch. It is now an open-source project where many engineers outside Google contributed. Like Apache Commons, it is also Modular and contains many independent libraries.</td>
+                
+                 <tr>
+              <td id="firstData">Jackson</td>
+              <td>:&nbsp</td>
+              <td>In software development, you have to process variously formatted data. Either you have to load or save data in different formats, or you have to transfer data in various formats. JSON is the de-facto data exchange format in modern software development.<br>
+                     </td>   
+            </tr>
+                </table>
+                <br>
+          </div>     
+      </div>
+    </div>
+
+    <div class="addSection">
+
+      <div class="adds">
+        <img
+          src="https://cdn.insidesport.co/wp-content/uploads/2021/04/27082012/IPL.jpeg"
+          alt="">
+      </div>
+
+      <div class="adds">
+        <div class="addHeading">WHAT'S NEW</div>
+        <div class="add">
+          <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210115220210/prethumb_min.png" alt="">
+          <span>Ad free experience with TechSnap Premium</span>
+        </div>
+        <div class="add">
+          <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210203145720/DSA-SP_1-min.png" alt="">
+          <span>DSA Self Placed course</span>
+        </div>
+        <div class="add">
+          <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210609101834/GC-LIve-Icon-1.png">
+          <span>Choose Best IDE for Programming</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contact">Contact us :
+    <div class="socialMedia">
+        <a href="#">Twitter<i class="fa fa-twitter"></i></a>
+      <a href="#">Facebook<i class="fa fa-facebook"></i></a>
+      <a href="#">Instagram<i class="fa fa-instagram"></i></a>
+      <a href="#">Tumblr<i class="fa fa-tumblr"></i></a>
+    </div>
+  </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+</html>
